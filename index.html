@@ -1,0 +1,42 @@
+<html>
+
+<head>
+	<title>Kuis</title>
+</head>
+
+<body bgcolor="orange">
+	<center>
+		<form name="formnya">
+			<h2>Kalkulator Sederhana Banget</h2>
+			<input name="input" placeholder="Masukkan angka dong">
+			<br>
+			<br>
+			<input type="button" name="plus" value="+" onclick="sum()">
+			<input type="button" name="min" value="-" onclick="mines() ">
+			<input type="button" name="kal" value="x" onclick="kali()">
+			<input type="button" name="bago" value="/" onclick="bagi()">
+			<input type="button" name="hapus" value="C" onclick="kos()">
+			<input type="button" name="calc" value="=" onclick="hasil()">
+		</form>
+	</center>
+
+	<script>
+		function sum() { document.formnya.input.value += "+"; }
+		function mines() { document.formnya.input.value += "-"; }
+		function kali() { document.formnya.input.value += "*"; }
+		function bagi() { document.formnya.input.value += "/"; }
+		function kos() { document.formnya.input.value = ""; }
+
+		function hasil() {
+			let hitung = eval(document.formnya.input.value)
+			document.formnya.input.value = hitung;
+		}
+	</script>
+
+	<?php
+			session_start();
+	?>
+
+</body>
+
+</html>
